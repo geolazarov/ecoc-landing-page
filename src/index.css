@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT Hoves Pro Trial Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0400-04FF, U+0500-052F, U+2000-206F, U+2010-2027, U+20B4, U+2122;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F2FFEB;
+  color: #195400;
+  font-family: 'TT Hoves Pro', sans-serif;
+  font-feature-settings: 'locl' on, 'ss14' on;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'TT Hoves Pro', sans-serif;
+  font-feature-settings: 'locl' on, 'ss14' on;
+}
+
+.accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.accordion-body.open {
+  grid-template-rows: 1fr;
+}
+.accordion-body > div {
+  overflow: hidden;
+}
