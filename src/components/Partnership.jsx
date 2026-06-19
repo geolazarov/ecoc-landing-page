@@ -1,9 +1,9 @@
 export default function Partnership() {
   return (
-    <section id="partners" className="bg-ecos-bg py-24 px-6 border-t border-ecos-bright/30">
+    <section id="partners" className="bg-ecos-bg py-24 px-6">
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-16">
         <div className="md:w-1/2">
-          <h2 className="font-condensed font-bold text-3xl md:text-5xl text-ecos-dark leading-tight">
+          <h2 className="font-condensed font-bold italic uppercase text-3xl md:text-[42px] text-ecos-dark" style={{ lineHeight: '46.20px' }}>
             За партньорството с<br />БГ Бъди Активен
           </h2>
         </div>

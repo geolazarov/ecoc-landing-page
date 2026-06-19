@@ -1,21 +1,32 @@
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-ecos-bright flex flex-col">
-      <div className="max-w-[1200px] mx-auto px-6 w-full flex-1 flex flex-col justify-between py-16">
-        <div className="flex-1 flex items-center justify-center">
-          <img src="/logo-ecos-green.svg" alt="ECOS Пловдив 2028" className="w-full max-w-[650px] object-contain" />
-        </div>
-        <div className="flex flex-col md:flex-row items-end justify-between gap-8 mt-16">
-          <p className="text-ecos-dark font-sans text-xl md:text-2xl text-center leading-relaxed">
-            Официалната кандидатура на Пловдив за Европейска столица на спорта 2028 е подготвена от Община Пловдив в партньорство със сдружение БГ Бъди Активен
-          </p>
-          <a href="#candidacy" className="flex-shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4v16M5 14l7 7 7-7" stroke="#195400" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-        </div>
+    <section className="relative w-full min-h-screen bg-ecos-bright flex flex-col items-center justify-center gap-0 px-6 py-16">
+
+      {/* Logo — 950px, centered */}
+      <div className="w-full flex justify-center">
+        <img
+          src="/logo-ecos-green.svg"
+          alt="ECOS Пловдив 2028"
+          className="w-full object-contain"
+          style={{ maxWidth: '950px' }}
+        />
       </div>
+
+      {/* Gap 112px */}
+      <div style={{ height: '7rem' }} />
+
+      {/* Text — centered */}
+      <p className="text-ecos-dark font-sans text-xl md:text-2xl text-center leading-relaxed max-w-3xl">
+        Официалната кандидатура на Пловдив за Европейска столица на спорта 2028 е подготвена от Община Пловдив в партньорство със сдружение <a href="https://bgbeactive.org/" target="_blank" rel="noopener noreferrer" className="underline">БГ Бъди Активен</a>
+      </p>
+
+      {/* Arrow — centered below text */}
+      <a href="#candidacy" className="mt-8" aria-label="Надолу">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 8.33331V31.6666M8.33331 20L20 31.6666L31.6666 20" stroke="#164900" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </a>
+
     </section>
   )
 }

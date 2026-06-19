@@ -1,44 +1,49 @@
 export default function Footer() {
   return (
-    <footer className="bg-ecos-darker py-16 px-6">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+    <footer className="bg-ecos-darker py-12 md:py-16 px-6">
+      <div className="max-w-[1200px] mx-auto flex flex-col">
 
-        <div className="flex flex-col md:flex-row gap-12">
-          <div className="flex flex-col gap-4">
-            <span className="font-condensed font-semibold text-sm uppercase tracking-widest text-ecos-bright">Град-кандидат</span>
-            <div className="flex items-center gap-4 flex-wrap">
-              <div className="bg-white rounded-lg px-4 py-3">
-                <img src="/logo-ecos.png" alt="ECOS Пловдив 2028" className="h-14 w-auto object-contain" />
-              </div>
-              <div className="bg-white rounded-lg px-4 py-3">
-                <img src="/logo-aces.png" alt="ACES Europe" className="h-14 w-auto object-contain" />
-              </div>
+        {/* Град-кандидат + Инициира */}
+        <div className="flex flex-col md:flex-row pb-10 md:pb-12" style={{ gap: '20px' }}>
+          {/* Град-кандидат */}
+          <div className="flex flex-col gap-6 border-t border-white/20 pt-8 w-full md:w-[590px] md:flex-shrink-0">
+            <span className="font-condensed font-semibold text-sm" style={{ color: '#43D300' }}>Град-кандидат</span>
+            <div className="flex items-center gap-8 flex-wrap">
+              <img src="/logo-ecos.png" alt="ECOS Пловдив 2028" className="h-14 md:h-16 w-auto object-contain" />
+              <a href="https://aceseurope.eu/" target="_blank" rel="noopener noreferrer">
+                <img src="/logo-aces.png" alt="ACES Europe" className="h-10 md:h-12 w-auto object-contain" />
+              </a>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <span className="font-condensed font-semibold text-sm uppercase tracking-widest text-ecos-bright">Инициира</span>
-            <div className="bg-white rounded-lg px-4 py-3 inline-flex">
-              <img src="/logo-obshtina.png" alt="Община Пловдив" className="h-14 w-auto object-contain" />
+          {/* Инициира */}
+          <div className="flex flex-col gap-6 border-t border-white/20 pt-8 w-full md:w-[590px] md:flex-shrink-0">
+            <span className="font-condensed font-semibold text-sm" style={{ color: '#43D300' }}>Инициира</span>
+            <div className="flex items-center gap-8 flex-wrap">
+              <a href="https://www.plovdiv.bg/" target="_blank" rel="noopener noreferrer">
+                <img src="/logo-obshtina.png" alt="Община Пловдив" className="h-12 md:h-14 w-auto object-contain" />
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <span className="font-condensed font-semibold text-sm uppercase tracking-widest text-ecos-bright">Партньори</span>
-          <div className="flex items-center gap-4 flex-wrap">
-            {[
-              { src: '/logo-bgba.png', alt: 'БГ Бъди Активен' },
-              { src: '/logo-mu.png', alt: 'Медицински Университет Пловдив' },
-              { src: '/logo-pl2019.png', alt: 'Пловдив 2019' },
-            ].map(logo => (
-              <div key={logo.alt} className="bg-white rounded-lg px-4 py-3">
-                <img src={logo.src} alt={logo.alt} className="h-12 w-auto object-contain" />
-              </div>
-            ))}
+        {/* Партньори */}
+        <div className="flex flex-col gap-6 border-t border-white/20 pt-8 pb-10 md:pb-12">
+          <span className="font-condensed font-semibold text-sm" style={{ color: '#43D300' }}>Партньори</span>
+          <div className="flex items-center gap-8 md:gap-10 flex-wrap">
+            <a href="https://bgbeactive.org/" target="_blank" rel="noopener noreferrer">
+              <img src="/logo-bgba.png" alt="БГ Бъди Активен" className="h-10 md:h-12 w-auto object-contain" />
+            </a>
+            <a href="https://mu-plovdiv.bg/" target="_blank" rel="noopener noreferrer">
+              <img src="/logo-mu.png" alt="Медицински Университет Пловдив" className="h-10 md:h-12 w-auto object-contain" />
+            </a>
+            <a href="https://plovdiv2019.eu/" target="_blank" rel="noopener noreferrer">
+              <img src="/logo-pl2019.png" alt="Пловдив 2019" className="h-10 md:h-12 w-auto object-contain" />
+            </a>
           </div>
         </div>
 
-        <p className="font-condensed font-semibold text-sm text-white/70 leading-relaxed border-t border-white/10 pt-8">
+        {/* Disclaimer */}
+        <p className="font-condensed text-sm leading-relaxed border-t border-white/20 pt-8" style={{ color: 'rgba(255,255,255,0.6)' }}>
           Пловдив е официален кандидат за титлата Европейска столица на спорта за 2028 година. Кандидатурата се оценява от ACES Europe, като титлата се припознава от Европейската комисия. Цялото съдържание на кандидатурата, включително планираните събития и инфраструктурни проекти, подлежи на окончателна оценка и одобрение. Официалните резултати се обявяват от ACES Europe. За повече информация посетете официалния уебсайт на ACES Europe.
         </p>
 

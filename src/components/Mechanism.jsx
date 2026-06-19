@@ -6,18 +6,20 @@ const items = [
 
 export default function Mechanism() {
   return (
-    <section className="bg-ecos-bg py-24 px-6 border-t border-ecos-bright/30">
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-16">
-        <div className="md:w-1/2">
-          <p className="font-condensed font-semibold text-2xl md:text-3xl text-ecos-dark leading-snug">
+    <section className="bg-ecos-bg py-16 md:py-24 px-6">
+      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row" style={{ gap: '20px' }}>
+        {/* Left column */}
+        <div className="w-full md:w-[590px] md:flex-shrink-0">
+          <p className="font-condensed font-semibold text-xl md:text-3xl text-ecos-dark leading-snug md:max-w-[332px]">
             Кандидатурата не е самоцел, а механизъм, чрез който Пловдив:
           </p>
         </div>
-        <ul className="md:w-1/2 flex flex-col gap-8">
+        {/* Right column */}
+        <ul className="flex flex-col w-full md:w-[590px] md:flex-shrink-0">
           {items.map((text, i) => (
-            <li key={i} className="flex gap-4">
-              <span className="font-condensed font-semibold text-2xl text-ecos-lime flex-shrink-0 leading-relaxed">→</span>
-              <p className="font-sans text-lg md:text-xl text-ecos-dark leading-relaxed">{text}</p>
+            <li key={i} className="flex items-start" style={{ gap: '8px', paddingTop: '32px', paddingBottom: '32px', borderBottom: '2px solid #D5EEC9' }}>
+              <span className="font-condensed flex-shrink-0" style={{ width: '32px', color: '#4BED07', fontSize: '20px', fontWeight: 500, lineHeight: '28px' }}>→</span>
+              <p className="font-condensed text-base md:text-[24px]" style={{ flex: '1 1 0', color: '#195400', fontWeight: 400, lineHeight: '1.4' }}>{text}</p>
             </li>
           ))}
         </ul>

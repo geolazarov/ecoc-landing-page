@@ -3,11 +3,9 @@ import { useState } from 'react'
 // Add more images to this array when available
 const slides = [
   { src: '/gallery-image.jpg', alt: 'Пловдив спорт 1' },
-  { src: '/gallery-image.jpg', alt: 'Пловдив спорт 2' },
-  { src: '/gallery-image.jpg', alt: 'Пловдив спорт 3' },
-  { src: '/gallery-image.jpg', alt: 'Пловдив спорт 4' },
-  { src: '/gallery-image.jpg', alt: 'Пловдив спорт 5' },
-  { src: '/gallery-image.jpg', alt: 'Пловдив спорт 6' },
+  { src: '/gallery-image-02-Gaya-Vardeva.jpg', alt: 'Пловдив спорт 2' },
+  { src: '/gallery-image-03.jpg', alt: 'Пловдив спорт 3' },
+  { src: '/gallery-image-04.jpg', alt: 'Пловдив спорт 4' },
 ]
 
 export default function Gallery() {

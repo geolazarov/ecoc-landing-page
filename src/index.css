@@ -4,11 +4,59 @@
 
 @font-face {
   font-family: 'TT Hoves Pro';
-  src: url('/fonts/TT Hoves Pro Trial Variable.ttf') format('truetype');
-  font-weight: 100 900;
+  src: url('/fonts/TT_Hoves_Pro_Compact_Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0000-00FF, U+0400-04FF, U+0500-052F, U+2000-206F, U+2010-2027, U+20B4, U+2122;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_Medium_Italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_DemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_DemiBold_Italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT_Hoves_Pro_Compact_Bold_Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 
 * {

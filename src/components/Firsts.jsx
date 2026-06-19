@@ -31,51 +31,49 @@ function AccordionItem({ item, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen || false)
 
   return (
-    <div className="border-b border-ecos-bright/30">
-      <button
-        className="w-full flex items-start gap-12 py-8 text-left"
-        onClick={() => setOpen(o => !o)}
-        aria-expanded={open}
-      >
-        {/* Number — italic, no background */}
+    <div className="py-8 md:py-[56px]" style={{ borderBottom: '2px solid #D5EEC9' }}>
+      <div className="flex items-start justify-between gap-3 md:gap-0">
+        {/* Number */}
         <span
-          className="font-condensed font-bold italic flex-shrink-0 w-20 leading-none pt-1"
-          style={{ fontSize: '4.625rem', color: '#4BED07' }}
+          className="font-condensed font-bold italic flex-shrink-0 w-[56px] md:w-[100px] text-[44px] md:text-[74px] leading-none"
+          style={{ color: '#43D300' }}
         >
           {item.num}
         </span>
 
-        {/* Summary */}
-        <p className="font-condensed font-bold italic text-xl md:text-2xl text-ecos-dark leading-snug flex-1 pt-3">
-          {item.summary}
-        </p>
+        {/* Content — flex-1 on mobile, fixed on desktop */}
+        <div className="flex-1 min-w-0 md:w-[900px] md:flex-none flex flex-col" style={{ gap: '16px' }}>
+          <p className="font-condensed text-[18px] md:text-[30px]" style={{ color: '#195400', fontWeight: 600, lineHeight: '1.35' }}>
+            {item.summary}
+          </p>
 
-        {/* Toggle — no background, light green dash */}
-        <span
-          className="flex-shrink-0 text-2xl font-light leading-none mt-3 select-none"
-          style={{ color: '#4BED07' }}
-        >
-          {open ? '—' : '+'}
-        </span>
-      </button>
-
-      <div className={`accordion-body ${open ? 'open' : ''}`}>
-        <div>
-          <div className="pb-8 pr-12 pl-[8rem]">
-            {item.bullets ? (
-              <ul className="flex flex-col gap-3">
-                {item.bullets.map((b, i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="text-ecos-lime font-condensed font-semibold text-xl flex-shrink-0">→</span>
-                    <span className="font-sans text-lg text-ecos-dark leading-relaxed">{b}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="font-sans text-lg text-ecos-dark leading-relaxed">{item.body}</p>
-            )}
+          <div className={`accordion-body ${open ? 'open' : ''}`}>
+            <div>
+              {item.bullets ? (
+                <ul className="flex flex-col" style={{ gap: '12px' }}>
+                  {item.bullets.map((b, i) => (
+                    <li key={i} className="flex items-start" style={{ gap: '12px' }}>
+                      <span className="font-condensed flex-shrink-0 text-base md:text-[24px]" style={{ width: '28px', color: '#4BED07', fontWeight: 500, lineHeight: '1.4' }}>→</span>
+                      <span className="font-condensed text-base md:text-[24px]" style={{ flex: '1 1 0', color: '#195400', fontWeight: 400, lineHeight: '1.4' }}>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="font-condensed text-base md:text-[24px]" style={{ color: '#195400', fontWeight: 400, lineHeight: '1.4' }}>{item.body}</p>
+              )}
+            </div>
           </div>
         </div>
+
+        {/* Toggle */}
+        <button
+          className="flex-shrink-0 select-none font-condensed ml-2 md:ml-0"
+          style={{ width: '32px', color: '#43D300', fontSize: '22px', fontWeight: 500, textAlign: 'center', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+          onClick={() => setOpen(o => !o)}
+          aria-expanded={open}
+        >
+          {open ? '—' : '+'}
+        </button>
       </div>
     </div>
   )
@@ -83,13 +81,13 @@ function AccordionItem({ item, defaultOpen }) {
 
 export default function Firsts() {
   return (
-    <section id="firsts" className="bg-ecos-bg py-24 px-6">
+    <section id="firsts" className="bg-ecos-bg py-16 md:py-24 px-6">
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex items-center gap-6 mb-16">
-          <img src="/logo-ecos.png" alt="" className="h-16 w-auto object-contain" />
+        <div className="flex items-center gap-4 md:gap-6 mb-10 md:mb-16">
+          <img src="/pictogram-heart.svg" alt="" className="object-contain w-[80px] md:w-[145px]" />
           <h2
-            className="font-condensed font-bold italic"
-            style={{ fontSize: '3.625rem', lineHeight: '110%', color: '#4BED07' }}
+            className="font-condensed font-bold italic uppercase text-[36px] md:text-[58px]"
+            style={{ color: '#43D300', lineHeight: '63.80px', maxWidth: '708px' }}
           >
             Четири „първи" места за България
           </h2>

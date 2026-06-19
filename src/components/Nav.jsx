@@ -16,12 +16,12 @@ export default function Nav() {
         <ul className="hidden md:flex items-center gap-8">
           {links.map(l => (
             <li key={l.href}>
-              <a href={l.href} className="font-condensed font-semibold text-base text-ecos-darker hover:text-ecos-bright transition-colors">
+              <a href={l.href} className="font-condensed font-semibold text-base text-ecos-darker">
                 {l.label}
               </a>
             </li>
           ))}
-          <li><a href="#" className="font-condensed font-semibold text-base text-ecos-darker hover:text-ecos-bright transition-colors">EN</a></li>
+          <li><a href="#" className="font-condensed font-semibold text-base text-ecos-darker">EN</a></li>
         </ul>
         <button className="md:hidden flex flex-col gap-1.5 p-2" onClick={() => setOpen(o => !o)} aria-label="Меню">
           <span className={`block w-6 h-0.5 bg-ecos-darker transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`} />
